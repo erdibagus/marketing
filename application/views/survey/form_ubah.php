@@ -1,0 +1,312 @@
+<?php foreach ($data as $d): ?>
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <form action="<?= base_url() ?>survey/proses_ubah" name="myForm" method="POST" enctype="multipart/form-data"
+        onsubmit="return validateFormUpdate()">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-2">
+            <div class="d-sm-flex">
+                <h1 class="h5 mb-0 text-center text-uppercase font-weight-bold text-gray-800">Ubah Survey</h1>
+            </div>
+        </div>
+
+        <div class="justify-content-between mb-0">
+            <div class="mb-4">
+                <!-- Illustrations -->
+                <div class="card border-bottom-secondary shadow mb-4">
+                    <div class="card-header py-3 bg-secondary">
+                        <h6 class="m-0 font-weight-bold text-white">Form Survey</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="col-lg">
+
+                            <!-- ID survey -->
+                            <input class="form-control" name="ids" type="hidden" value="<?= $d->id_survey ?>">
+
+                            <!-- Nama survey -->
+                            <div class="form-group"><label>Tanggal</label>
+                                <input class="form-control" name="tgl" type="text" value="<?= $d->tanggal_survey ?>" readonly>
+                            </div>
+
+                            <!-- kategori -->
+                            <div class="form-group"><label>Kategori</label>
+                                <select name="kategori" class="form-control chosen">
+                                    <?php foreach($kategori as $j): ?>
+                                    <?php if($d->id_kategori == $j->id_kategori): ?>
+                                    <option value="<?= $j->id_kategori ?>" selected><?= $j->nama_kategori ?></option>
+                                    <?php else: ?>
+                                    <option value="<?= $j->id_kategori ?>"><?= $j->nama_kategori ?></option>
+                                    <?php endif; ?>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+
+                            <div class="form-group"><label>Sistem Pinjam</label>
+                                <select name="sistem_pinjam" class="form-control chosen">
+                                    <?php foreach($sistempinjam as $s): ?>
+                                    <?php if($d->sistem_pinjam == $s->id_sistem_pinjam): ?>
+                                    <option value="<?= $s->id_sistem_pinjam ?>" selected><?= $s->nama_sistem_pinjam ?></option>
+                                    <?php else: ?>
+                                    <option value="<?= $s->id_sistem_pinjam ?>"><?= $s->nama_sistem_pinjam ?></option>
+                                    <?php endif; ?>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+
+                            <div class="form-group"><label>Nasabah</label>
+                                <select name="nasabah_id" class="form-control chosen">
+                                    <?php foreach($nasabah as $j): ?>
+                                    <?php if($d->nasabah_id == $j->id_nasabah_prospek): ?>
+                                    <option value="<?= $j->id_nasabah_prospek ?>" selected><?= $j->nama_nasabah_prospek ?> | <?= $j->alamat ?></option>
+                                    <?php else: ?>
+                                    <option value="<?= $j->id_nasabah_prospek ?>"><?= $j->nama_nasabah_prospek ?> | <?= $j->alamat ?></option>
+                                    <?php endif; ?>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+
+                            <div class="form-group"><label>Jangka Waktu</label>
+                                <div class="input-group">
+                                    <input name="jangka" type="number" value="<?= $d->jangka ?>" class="form-control" placeholder="">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Bulan</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label>Tujuan</label>
+                                <input class="form-control" name="tujuan" type="text" value="<?= $d->tujuan ?>" placeholder="">
+                            </div>
+
+                            <div class="form-group"><label>Agunan</label>
+                                <select name="agunan" class="form-control chosen">
+                                    <?php foreach($agunan as $s): ?>
+                                    <?php if($d->agunan == $s->id_agunan): ?>
+                                    <option value="<?= $s->id_agunan ?>" selected><?= $s->nama_agunan ?></option>
+                                    <?php else: ?>
+                                    <option value="<?= $s->id_agunan ?>"><?= $s->nama_agunan ?></option>
+                                    <?php endif; ?>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+
+                            <div class="form-group"><label>Usaha</label>
+                                <input class="form-control" name="usaha" type="text" value="<?= $d->usaha ?>" placeholder="">
+                            </div>
+
+                            <div class="form-group"><label>Plafon</label>
+                                <input class="form-control" name="plafon" type="text" id="dengan-rupiah" value="<?= $d->plafon ?>" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <div class="mb-4">
+                <!-- Illustrations -->
+                <div class="card border-bottom-secondary shadow mb-4">
+                    <div class="card-header py-3 bg-secondary">
+                        <h6 class="m-0 font-weight-bold text-white">Foto</h6>
+                    </div>
+                    <div class="card-body">
+                        <input type="hidden" name="fotoLama1" value="<?= $d->foto_p1 ?>">
+                        <input type="hidden" name="fotoLama2" value="<?= $d->foto_p2 ?>">
+                        <input type="hidden" name="fotoLama3" value="<?= $d->foto_p3 ?>">
+                        <input type="hidden" name="fotoLama4" value="<?= $d->foto_p4 ?>">
+                        <input type="hidden" name="user" value="<?= $d->user_id ?>">
+                        <input type="hidden" name="kpk" value="<?= $d->kpk ?>">
+                        <input type="hidden" name="lokasi" value="<?= $d->lokasi ?>">
+                        <center>
+                            <div id="img">
+                                <img src="<?= base_url() ?>assets/upload/survey/<?= $d->foto_p1 ?>" id="outputImg1"
+                                    width="200" maxheight="300">
+                            </div>
+                        </center>
+                        <br>
+                        <span class="text-danger">*kosongkan jika tidak ingin merubah</span>
+                        <!-- foto -->
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input class="custom-file-input1" type="file" id="GetFile1" name="photo1"
+                                    onchange="VerifyFileNameAndFileSize1()" accept=".png,.gif,.jpeg,.tiff,.jpg">
+                            </div>
+                        </div>
+                        <center>
+                            <div id="img">
+                                <img src="<?= base_url() ?>assets/upload/survey/<?= $d->foto_p2 ?>" id="outputImg2"
+                                    width="200" maxheight="300">
+                            </div>
+                        </center>
+                        <br>
+                        <span class="text-danger">*kosongkan jika tidak ingin merubah</span>
+                        <!-- foto -->
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input class="custom-file-input1" type="file" id="GetFile2" name="photo2"
+                                    onchange="VerifyFileNameAndFileSize2()" accept=".png,.gif,.jpeg,.tiff,.jpg">
+                            </div>
+                        </div>
+                        <center>
+                            <div id="img">
+                                <img src="<?= base_url() ?>assets/upload/survey/<?= $d->foto_p3 ?>" id="outputImg3"
+                                    width="200" maxheight="300">
+                            </div>
+                        </center>
+                        <br>
+                        <span class="text-danger">*kosongkan jika tidak ingin merubah</span>
+                        <!-- foto -->
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input class="custom-file-input1" type="file" id="GetFile3" name="photo3"
+                                    onchange="VerifyFileNameAndFileSize3()" accept=".png,.gif,.jpeg,.tiff,.jpg">
+                            </div>
+                        </div>
+                        <center>
+                            <div id="img">
+                                <img src="<?= base_url() ?>assets/upload/survey/<?= $d->foto_p4 ?>" id="outputImg4"
+                                    width="200" maxheight="300">
+                            </div>
+                        </center>
+                        <br>
+                        <span class="text-danger">*kosongkan jika tidak ingin merubah</span>
+                        <!-- foto -->
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input class="custom-file-input1" type="file" id="GetFile4" name="photo4"
+                                    onchange="VerifyFileNameAndFileSize4()" accept=".png,.gif,.jpeg,.tiff,.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success btn-md btn-icon-split">
+                <span class="text text-white">Simpan Perubahan</span>
+                <span class="icon text-white-50">
+                    <i class="fas fa-save"></i>
+                </span>
+            </button>
+            </div>
+        </div>
+
+
+    </form>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
+<script src="<?= base_url(); ?>assets/js/survey.js"></script>
+<script src="<?= base_url(); ?>assets/js/loading.js"></script>
+<script src="<?= base_url(); ?>assets/js/validasi/formsurvey.js"></script>
+<script src="<?= base_url(); ?>assets/plugin/chosen/chosen.jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#provinsi').change(function() {
+            var id = $(this).val();
+            $.ajax({
+                type: "POST",
+                url: "<?= base_url('survey/getKabupaten') ?>",
+                data: {
+                    id: id
+                },
+                dataType: "JSON",
+                success: function(response) {
+                    $('#kabupaten').html(response);
+                }
+            });
+        });
+
+        $('#kabupaten').change(function() {
+            var id = $(this).val();
+            $.ajax({
+                type: "POST",
+                url: "<?= base_url('survey/getKecamatan') ?>",
+                data: {
+                    id: id
+                },
+                dataType: "JSON",
+                success: function(response) {
+                    $('#kecamatan').html(response);
+                }
+            });
+        });
+
+        $('#kecamatan').change(function() {
+            var id = $(this).val();
+            $.ajax({
+                type: "POST",
+                url: "<?= base_url('survey/getDesa') ?>",
+                data: {
+                    id: id
+                },
+                dataType: "JSON",
+                success: function(response) {
+                    $('#desa').html(response);
+                }
+            });
+        });
+        var dengan_rupiah = document.getElementById('dengan-rupiah');
+        dengan_rupiah.addEventListener('keyup', function(e)
+        {
+            dengan_rupiah.value = formatRupiah(this.value, 'Rp. ');
+        });
+        
+        function formatRupiah(angka, prefix)
+        {
+            var number_string = angka.replace(/[^,\d]/g, '').toString(),
+                split    = number_string.split(','),
+                sisa     = split[0].length % 3,
+                rupiah     = split[0].substr(0, sisa),
+                ribuan     = split[0].substr(sisa).match(/\d{3}/gi);
+                
+            if (ribuan) {
+                separator = sisa ? '.' : '';
+                rupiah += separator + ribuan.join('.');
+            }
+            
+            rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+            return prefix == undefined ? rupiah : (rupiah ? 'Rp.' + rupiah : '');
+        }
+    });
+</script>
+
+<script>
+$('.chosen').chosen({
+    width: '100%',
+
+});
+</script>
+
+<?php if($this->session->flashdata('Pesan')): ?>
+
+<?php else: ?>
+<script>
+$(document).ready(function() {
+
+    let timerInterval
+    Swal.fire({
+        title: 'Memuat...',
+        timer: 300,
+        onBeforeOpen: () => {
+            Swal.showLoading()
+        },
+        onClose: () => {
+            clearInterval(timerInterval)
+        }
+    }).then((result) => {
+
+    })
+});
+</script>
+<?php endif; ?>
+
+<?php endforeach; ?>
