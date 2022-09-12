@@ -45,6 +45,7 @@ if ($this->session->has_userdata('login_session')) {
 </head>
 
 <body class="bg-login-image">
+<input type="hidden" value="<?= base_url() ?>" id="baseurl">
 
 <style>
         .bg-login-image {
