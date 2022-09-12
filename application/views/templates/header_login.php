@@ -30,8 +30,7 @@ if ($this->session->has_userdata('login_session')) {
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url(); ?>assets/sbadmin/css/sb-admin-biru.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    
     <script type="text/javascript">
     $(document).ready(function() {
         $(".judul").hide();
@@ -46,8 +45,6 @@ if ($this->session->has_userdata('login_session')) {
 </head>
 
 <body class="bg-login-image">
-<!-- Base url untuk js-->
-<input type="hidden" value="<?= base_url() ?>" id="baseurl">
 
 <style>
         .bg-login-image {
