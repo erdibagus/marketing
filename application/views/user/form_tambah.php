@@ -83,8 +83,8 @@
                             <div class="form-group"><label>Level</label>
                                 <select name="level" class="form-control chosen">
                                     <option value="">--Pilih--</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="manajer">Manajer</option>
+                                    <option value="admin">Manajer Pusat</option>
+                                    <option value="manajer">Manajer KPK</option>
                                     <option value="user">User</option>
                                 </select>
                             </div>

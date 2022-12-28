@@ -38,6 +38,43 @@ function validateForm() {
 
 }
 
+function validateFormUpdate() {
+    var namaL = document.forms["myForm"]["namaL"].value;
+    var user = document.forms["myForm"]["user"].value;
+    var kantor = document.forms["myForm"]["kantor"].value;
+    var divisi = document.forms["myForm"]["divisi"].value;
+    var level = document.forms["myForm"]["level"].value;
+    var pwd = document.forms["myForm"]["pwd"].value;
+    var kpwd = document.forms["myForm"]["kpwd"].value;
+
+    if (namaL == "") {
+        validasi('Nama Lengkap wajib di isi!', 'warning');
+        return false;
+    } else if (user == '') {
+        validasi('Username wajib di isi!', 'warning');
+        return false;
+    } else if (divisi == '') {
+        validasi('Divisi wajib di isi!', 'warning');
+        return false;
+    } else if (kantor == '') {
+        validasi('Kantor wajib di isi!', 'warning');
+        return false;
+    } else if (level == '') {
+        validasi('Level wajib di isi!', 'warning');
+        return false;
+    } else if (pwd !== '' || kpwd !== '') {
+        if (pwd.length < 5) {
+            validasi('Panjang Password minimal 5 karakter!', 'warning');
+            return false;
+        } else if (pwd !== kpwd) {
+            validasi('Konfirmasi Password tidak sesuai!', 'warning');
+            return false;
+        }
+
+    }
+
+}
+
 
 function validasi(judul, status) {
     swal.fire({

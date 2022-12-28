@@ -15,7 +15,7 @@
 
         </div>
 
-        <div class="d-sm-flex  justify-content-between mb-0">
+        <div class="justify-content-between mb-0">
             <div class="mb-4">
                 <!-- form -->
                 <div class="card shadow mb-4">
@@ -46,7 +46,7 @@
 
             </div>
 
-            <div class="col-lg-4 mb-4">
+            <div class="mb-4">
                 <!-- file -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">

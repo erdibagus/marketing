@@ -121,7 +121,7 @@ border-color: grey;
                     <span>Kantor</span>
                 </a>
             </li>
-            <?php if($title == 'Nasabah'): ?>
+            <!-- <?php if($title == 'Nasabah'): ?>
             <li class="nav-item active">
                 <?php else: ?>
             <li class="nav-item">
@@ -131,7 +131,7 @@ border-color: grey;
                     <span>Nasabah</span>
                 </a>
             </li>
-            </li>
+            </li> -->
 
             <?php if($title == 'Nasabah Prospek'): ?>
             <li class="nav-item active">
