@@ -308,23 +308,24 @@ class Scoring extends CI_Controller {
 			$installmentratio = 60;
 		  } else if($installment >30){
 			$installmentratio = 80;
-		  } else ($colateral >0) {
-			$installmentratio = 100
-		  };
+		  } else if($installment >0) {
+			$installmentratio = 100;
+		  }
+		  
 		
-		if($colateral >80){
-		$colateralratio = 5;
-		} else if($colateral >70){
-		$colateralratio = 20;
-		} else if($colateral >60){
-		$colateralratio = 40;
-		} else if($colateral >50){
-		$colateralratio = 60;
-		} else if($colateral >40){
-		$colateralratio = 80;
-		} else ($colateral >0) {
-		$colateralratio = 100
-		};
+		  if($colateral >80){
+			$colateralratio = 5;
+		  } else if($colateral >70){
+			$colateralratio = 20;
+		  } else if($colateral >60){
+			$colateralratio = 40;
+		  } else if($colateral >50){
+			$colateralratio = 60;
+		  } else if($colateral >40){
+			$colateralratio = 80;
+		  } else if($colateral >0) {
+			$colateralratio = 100;
+		  }
 
 
 		$sosialpeminjam = 	$jenis_kelamin3 + $usia3 + $status_pernikahan3 + $tanggungan3 + $lama_tinggal3 + $lokasi_tinggal3 +
@@ -500,23 +501,24 @@ class Scoring extends CI_Controller {
 			$installmentratio = 60;
 		  } else if($installment >30){
 			$installmentratio = 80;
-		  } else ($colateral >0) {
-			$installmentratio = 100
-		  };
+		  } else if($installment >0) {
+			$installmentratio = 100;
+		  }
+		  
 		
-		if($colateral >80){
-		$colateralratio = 5;
-		} else if($colateral >70){
-		$colateralratio = 20;
-		} else if($colateral >60){
-		$colateralratio = 40;
-		} else if($colateral >50){
-		$colateralratio = 60;
-		} else if($colateral >40){
-		$colateralratio = 80;
-		} else ($colateral >0) {
-		$colateralratio = 100
-		};
+		  if($colateral >80){
+			$colateralratio = 5;
+		  } else if($colateral >70){
+			$colateralratio = 20;
+		  } else if($colateral >60){
+			$colateralratio = 40;
+		  } else if($colateral >50){
+			$colateralratio = 60;
+		  } else if($colateral >40){
+			$colateralratio = 80;
+		  } else if($colateral >0) {
+			$colateralratio = 100;
+		  }
 
 
 		$sosialpeminjam = 	$jenis_kelamin3 + $usia3 + $status_pernikahan3 + $tanggungan3 + $lama_tinggal3 + $lokasi_tinggal3 +

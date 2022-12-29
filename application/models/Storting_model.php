@@ -595,4 +595,78 @@ class Storting_model extends ci_model{
       return $query = $this->db->get();
     }
 
+    function get_user($params = array())
+    {
+        if(isset($params['id']))
+        {
+            $this->db->where('id_user', $params['id']);
+        }
+
+        else
+        {
+            $this->db->order_by('id_user', 'asc');
+        }
+
+        $this->db->select('id_user, nama');
+        $res = $this->db->get('user');
+
+        if(isset($params['id']))
+        {
+            return $res->row_array();
+        }
+        else
+        {
+            return $res->result_array();
+        }
+    }
+
+    function get_majors($params = array())
+    {
+        if(isset($params['id']))
+        {
+            $this->db->where('majors_id', $params['id']);
+        }
+
+        if(isset($params['majors_name']))
+        {
+            $this->db->where('majors_name', $params['majors_name']);
+        }
+
+        if(isset($params['majors_short_name']))
+        {
+            $this->db->where('majors_short_name', $params['majors_short_name']);
+        }
+
+
+        if(isset($params['limit']))
+        {
+            if(!isset($params['offset']))
+            {
+                $params['offset'] = NULL;
+            }
+
+            $this->db->limit($params['limit'], $params['offset']);
+        }
+        if(isset($params['order_by']))
+        {
+            $this->db->order_by($params['order_by'], 'desc');
+        }
+        else
+        {
+            $this->db->order_by('majors_id', 'asc');
+        }
+
+        $this->db->select('majors_id, majors_name, majors_short_name');
+        $res = $this->db->get('majors');
+
+        if(isset($params['id']))
+        {
+            return $res->row_array();
+        }
+        else
+        {
+            return $res->result_array();
+        }
+    }
+
 }

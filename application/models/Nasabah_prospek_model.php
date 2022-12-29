@@ -80,7 +80,6 @@ class Nasabah_prospek_model extends ci_model{
 
     function data()
     {
-        $this->db->from('nasabah_prospek');
         $this->db->order_by('id_nasabah_prospek','DESC');
         return $query = $this->db->get('nasabah_prospek');
     }

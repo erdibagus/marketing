@@ -7,7 +7,7 @@
 
   <div class="card border-bottom-secondary shadow mb-4">
     <div class="card-body">
-        <form method="POST" action="<?= base_url() ?>storting/upload" enctype="multipart/form-data" name="myForm" onsubmit="return validateForm()">
+        <form method="POST" action="<?= base_url() ?>storting/upload2" enctype="multipart/form-data" name="myForm" onsubmit="return validateForm()">
             <div class="row">
                 <div class="col-lg-12 mb-2">
                 <span class="font-weight-bold text-dark">Petunjuk!</span>
@@ -55,6 +55,12 @@
                 </div>
                 <input name="status" type="hidden" class="form-control" value="0">
             </div>
+            
+
+						<div class="form-group">
+							<textarea placeholder="Copy data yang akan dimasukan dari file excel, dan paste disini" rows="8" class="form-control" name="rows"></textarea>
+						</div>
+						
             <div class="row">
                 <div class="col-lg-3 mb-4">
                     <div class="form-group"><label class="text-dark font-weight-bold">Pilih File Excel</label>
