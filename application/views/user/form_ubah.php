@@ -4,7 +4,7 @@
     <?php foreach($user as $u): ?>
 
     <form action="<?= base_url() ?>user/proses_ubah" name="myForm" method="POST" enctype="multipart/form-data"
-        onsubmit="return validateForm()">
+        onsubmit="return validateFormUpdate()">
 
 
         <!-- Page Heading -->
@@ -98,25 +98,23 @@
                             <div class="form-group"><label>Level</label>
                                 <select name="level" class="form-control">
                                         <option value="admin" 
-                                    <?php if($u->level == "admin"): ?> Selected <?php endif; ?> >Admin</option>
+                                    <?php if($u->level == "admin"): ?> Selected <?php endif; ?> >Manajer Pusat</option>
                                         <option value="manager" 
-                                    <?php if($u->level == "manager"): ?> Selected <?php endif; ?> >Manager</option>
-                                        <option value="managerpusat" 
-                                    <?php if($u->level == "managerpusat"): ?> Selected <?php endif; ?> >Manager Pusat</option>
+                                    <?php if($u->level == "manager"): ?> Selected <?php endif; ?> >Manager KPK</option>
                                         <option value="user" 
                                     <?php if($u->level == "user"): ?> Selected <?php endif; ?> >User</option>
                                 </select>
                             </div>
 
                              <!-- Status -->
-                             <div class="form-group"><label>Status</label>
+                             <!-- <div class="form-group"><label>Status</label>
                                 <select name="status" class="form-control">
                                     <option value="Aktif" 
                                     <?php if($u->status == "Aktif"): ?> Selected <?php endif; ?> >Aktif</option>
                                     <option value="Tidak Aktif" 
                                     <?php if($u->status == "Tidak Aktif"): ?> Selected <?php endif; ?> >Tidak Aktif</option>
                                 </select>
-                            </div>
+                            </div> -->
 
                             
 

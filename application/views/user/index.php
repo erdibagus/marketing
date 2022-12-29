@@ -28,7 +28,9 @@
                                 <th>Divisi</th>
                                 <th>KPK</th>
                                 <th>Level</th>
+                                <?php if($this->session->userdata('login_session')['level'] == 'superadmin'): ?>
                                 <th width="1%">Aksi</th>
+                                <?php endif; ?>
                             </tr>
                         </thead>
                         <tbody style="cursor:pointer;" id="tbody"> 
@@ -40,7 +42,16 @@
                                 <td onclick="detail('<?= $u->id_user ?>')"><?= $u->nama ?></td>
                                 <td onclick="detail('<?= $u->id_user ?>')"><?= $u->nama_divisi ?></td>
                                 <td onclick="detail('<?= $u->id_user ?>')"><?= $u->nama_kantor ?></td>
-                                <td onclick="detail('<?= $u->id_user ?>')"><?= $u->level ?></td>
+                                <td onclick="detail('<?= $u->id_user ?>')"><?php if($u->level == 'admin'): ?>
+                                    Manajer Pusat
+                                    <?php elseif($u->level == 'manajer'): ?>
+                                    Manajer KPK
+                                    <?php elseif($u->level == 'user'): ?>
+                                    User
+                                    <?php else: ?>
+                                    Superadmin
+                                    <?php endif; ?></td>
+                                <?php if($this->session->userdata('login_session')['level'] == 'superadmin'): ?>
                                 <td>
                                     <center>
                                         <a href="<?= base_url() ?>user/ubah/<?= $u->id_user ?>"
@@ -53,6 +64,7 @@
                                         </a>
                                     </center>
                                 </td>
+                                <?php endif; ?>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>

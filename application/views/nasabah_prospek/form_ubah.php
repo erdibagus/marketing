@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="d-sm-flex  justify-content-between mb-0">
+        <div class="justify-content-between mb-0">
             <div class="mb-4">
                 <!-- Illustrations -->
                 <div class="card border-bottom-secondary shadow mb-4">
