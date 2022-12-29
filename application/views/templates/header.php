@@ -162,7 +162,7 @@ border-color: grey;
                         <a class="collapse-item" href="<?= base_url() ?>kolektabilitas"><b>Kolektabilitas</b></a>
                         <a class="collapse-item" href="<?= base_url() ?>agunan"><b>Agunan</b></a>
                         <a class="collapse-item" href="<?= base_url() ?>sistem_pinjam"><b>Sistem Pinjam</b></a>
-                        <a class="collapse-item" href="<?= base_url() ?>sumber"><b>Sumber</b></a>
+                        <a class="collapse-item" href="<?= base_url() ?>sumber"><b>Sumber Data</b></a>
                     </div>
 
                 </div>
