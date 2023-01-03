@@ -58,11 +58,11 @@
     </div>
 </div>
 
-<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
+<!-- <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script> -->
 <script src="<?= base_url(); ?>assets/js/login.js"></script>
 
 <!-- Bootstrap core JavaScript-->
-<script src="<?= base_url(); ?>assets/sbadmin/vendor/jquery/jquery.min.js"></script>
+<!-- <script src="<?= base_url(); ?>assets/sbadmin/vendor/jquery/jquery.min.js"></script> -->
 <script src="<?= base_url(); ?>assets/sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->

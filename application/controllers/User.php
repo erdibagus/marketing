@@ -238,5 +238,58 @@ class User extends CI_Controller {
 		  redirect('user');
 	}
     
-
+	public function import_user()
+	{
+		$upload_file=$_FILES['userfile']['name'];
+		$extension=pathinfo($upload_file,PATHINFO_EXTENSION);
+		if($extension=='csv')
+		{
+			$reader= new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+		} else if($extension=='xls')
+		{
+			$reader= new \PhpOffice\PhpSpreadsheet\Reader\Xls();
+		} else
+		{
+			$reader= new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+		}
+		$spreadsheet=$reader->load($_FILES['userfile']['tmp_name']);
+		$sheetdata=$spreadsheet->getActiveSheet()->toArray();
+		$sheetcount=count($sheetdata);
+		if($sheetcount>1)
+		{
+			$data=array();
+			for ($i=1; $i < $sheetcount; $i++) { 
+				$id=$sheetdata[$i][0];
+				$nama=$sheetdata[$i][1];
+				$username=$sheetdata[$i][2];
+				$level=$sheetdata[$i][3];
+				$password=$sheetdata[$i][4];
+				$foto=$sheetdata[$i][5];
+				$kantor=$sheetdata[$i][6];
+				$divisi=$sheetdata[$i][7];
+				$status=$sheetdata[$i][8];
+				$data[]=array(
+					'id_user'=>$id,
+					'nama'=>$nama,
+					'username'=>$username,
+					'level'=>$level,
+					'password'=>$password,
+					'foto'=>$foto,
+					'kantor_id'=>$kantor,
+					'divisi_id'=>$divisi,
+					'status'=>$status,
+				);
+			}
+			$inserdata=$this->user_model->insert_batch($data);
+			if($inserdata)
+			{
+				$this->session->set_flashdata('message','<div class="alert alert-success">Successfully Added.</div>');
+				redirect('home');
+			} else {
+				$this->session->set_flashdata('message','<div class="alert alert-danger">Data Not uploaded. Please Try Again.</div>');
+				redirect('home');
+			}
+		}
+	}
+	
 }

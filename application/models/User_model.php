@@ -9,6 +9,17 @@ class User_model extends ci_model{
         return $query = $this->db->get('user');
     }
 
+    public function insert_batch($data){
+      $this->db->insert_batch('user',$data);
+      if($this->db->affected_rows()>0)
+      {
+        return 1;
+      }
+      else{
+        return 0;
+      }
+    }
+
     function datauserupload($id = null)
     {
         $this->db->from('user');

@@ -28,23 +28,23 @@
                             
                             <div class="form-group"><label>Nasabah</label>
                                 <div class="input-group">
-                                    <select name="nasabah_id" class="form-control chosen">
+                                    <select name="nasabah_id" class="form-control select2">
                                         <option value="">--Pilih--</option>
                                         <?php foreach($nasabah as $j): ?>
                                         <option class="font-weight-bold" value="<?= $j->id_nasabah_prospek ?>"><?= $j->nama_nasabah_prospek ?> | <?= $j->alamat ?> </option>
                                         <?php endforeach ?>
                                     </select>
-                                    <div class="input-group-append">
-                                        <a class="btn btn-primary" href="<?= base_url() ?>nasabah_prospek/tambah_prospek" >
+                                    
+                                        <a class="btn btn-primary" href="<?= base_url() ?>nasabah_prospek/tambah_prospek">
                                             <i class="fas fa-plus fa-sm"></i>
                                         </a>
-                                    </div>
+                                    
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label>Kategori</label>
-                                <select name="kategori" id="kategori" class="form-control chosen">
+                                <select name="kategori" class="form-control chosen">
                                     <option value="">--Pilih--</option>
                                     <?php foreach($kategori as $j): ?>
                                     <option value="<?= $j->id_kategori ?>"><?= $j->nama_kategori ?></option>
@@ -147,7 +147,10 @@
 </div>
 <!-- End of Main Content -->
 
-<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
 <script src="<?= base_url(); ?>assets/js/prospek.js"></script>
 <script src="<?= base_url(); ?>assets/js/loading.js"></script>
 <script src="<?= base_url(); ?>assets/js/validasi/formprospek.js"></script>
@@ -195,8 +198,12 @@ $('.chosen').chosen({
     width: '100%',
 
 });
-</script>
 
+$('.select2').select2({
+    width: '100%'
+});
+
+</script>
 
 <?php if($this->session->flashdata('Pesan')): ?>
 
