@@ -343,14 +343,14 @@ border-color: grey;
                     <span>Storting</span>
                 </a>
             </li>
-            
+            <?php if($this->session->userdata('login_session')['level'] == 'admin' || $this->session->userdata('login_session')['level'] == 'superadmin' ): ?>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Heading -->
             <div class="sidebar-heading">
                 Laporan
             </div>
-            <?php if($this->session->userdata('login_session')['level'] == 'admin' || $this->session->userdata('login_session')['level'] == 'superadmin' ): ?>
+            
             <?php if($title == 'Grafik'): ?>
             <li class="nav-item active">
                 <?php else: ?>
@@ -374,7 +374,6 @@ border-color: grey;
                     <span>Grafik</span>
                 </a>
             </li>
-            <?php endif; ?>
 
             <?php if($title == 'Laporan Prospek' or $title == 'Laporan Survey' or $title == 'Laporan Penagihan' or $title == 'Laporan Telemarketing'): ?>
             <li class="nav-item active">
@@ -398,7 +397,7 @@ border-color: grey;
 
                 </div>
             </li>
-            
+            <?php endif; ?>
             <!-- Divider -->
             <hr class="sidebar-divider">
 

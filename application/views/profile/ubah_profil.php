@@ -4,7 +4,7 @@
     <?php foreach($user as $u): ?>
 
     <form action="<?= base_url() ?>profile/proses_ubah" name="myForm" method="POST" enctype="multipart/form-data"
-        onsubmit="return validateForm()">
+        onsubmit="return validateFormProfil()">
 
 
         <!-- Page Heading -->
