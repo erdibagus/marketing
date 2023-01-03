@@ -29,7 +29,7 @@
                             
                             <div class="form-group"><label>Nasabah</label>
                                 <div class="input-group">
-                                    <select name="nasabah_id" class="form-control chosen">
+                                    <select name="nasabah_id" class="form-control select2">
                                         <option value="">--Pilih--</option>
                                         <?php foreach($nasabah as $j): ?>
                                         <option class="font-weight-bold" value="<?= $j->id_nasabah_prospek ?>"><?= $j->nama_nasabah_prospek ?> | <?= $j->alamat ?> </option>
@@ -185,8 +185,10 @@
 </div>
 <!-- End of Main Content -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
-<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/survey.js"></script>
 <script src="<?= base_url(); ?>assets/js/loading.js"></script>
 <script src="<?= base_url(); ?>assets/js/validasi/formsurvey.js"></script>
@@ -261,6 +263,10 @@ $(window).load(function(){
 $('.chosen').chosen({
     width: '100%',
 
+});
+
+$('.select2').select2({
+    width: '100%'
 });
 </script>
 

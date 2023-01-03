@@ -448,7 +448,7 @@ border-color: grey;
                 <?php else: ?>
             <li class="nav-item">
                 <?php endif; ?>
-                <a class="nav-link pb-0" href="<?= base_url() ?>grafik">
+                <a class="nav-link" href="<?= base_url() ?>grafik">
                 <i class="fas fa-fw fa fa-bolt"></i>
                     <span>Grafik</span>
                 </a>
@@ -461,7 +461,7 @@ border-color: grey;
                 <?php else: ?>
             <li class="nav-item">
                 <?php endif; ?>
-                <a class="nav-link pb-0" href="<?= base_url() ?>grafikmanajer">
+                <a class="nav-link" href="<?= base_url() ?>grafikmanajer">
                 <i class="fas fa-fw fa fa-bolt"></i>
                     <span>Grafik</span>
                 </a>

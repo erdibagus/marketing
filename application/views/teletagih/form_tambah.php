@@ -27,7 +27,7 @@
                                     autocomplete="off" readonly>
                             
                             <div class="form-group"><label>Nasabah</label>
-                                <select name="storting" class="form-control chosen">
+                                <select name="storting" class="form-control select2">
                                     <option value="">--Pilih--</option>
                                     <?php foreach($storting as $j): ?>
                                     <option class="font-weight-bold" value="<?= $j->id_storting ?>"><?= $j->rek ?> | <?= $j->nama_nasabah ?> (<?= $j->no_hp ?>) </option>
@@ -128,7 +128,10 @@
 </div>
 <!-- End of Main Content -->
 
-<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
 <script src="<?= base_url(); ?>assets/js/teletagih.js"></script>
 <script src="<?= base_url(); ?>assets/js/loading.js"></script>
 <script src="<?= base_url(); ?>assets/js/validasi/formteletagih.js"></script>
@@ -202,6 +205,10 @@ $(window).load(function(){
 $('.chosen').chosen({
     width: '100%',
 
+});
+
+$('.select2').select2({
+    width: '100%'
 });
 </script>
 
