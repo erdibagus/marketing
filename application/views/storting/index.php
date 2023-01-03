@@ -13,6 +13,7 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
+                                    <th>Bulan</th>
                                     <th>Marketing</th>
                                     <th>Rekening</th>
                                     <th>Nama Nasabah</th>
@@ -49,6 +50,7 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
+                                    <th>Bulan</th>
                                     <th>Marketing</th>
                                     <th>Rekening</th>
                                     <th>Nama Nasabah</th>
@@ -85,6 +87,7 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
+                                    <th>Bulan</th>
                                     <th>Rekening</th>
                                     <th>Nama Nasabah</th>
                                     <th>Alamat</th>

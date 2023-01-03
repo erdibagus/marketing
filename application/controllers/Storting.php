@@ -22,6 +22,7 @@ class Storting extends CI_Controller {
             $no++;
             $row = array();
             $row[] = $no;
+            $row[] = ''.$p->bulan.' '.$p->tahun.'';
             $row[] = $p->nama;
             $row[] = $p->rek;
             $row[] = $p->nama_nasabah;
@@ -58,6 +59,7 @@ class Storting extends CI_Controller {
             $no++;
             $row = array();
             $row[] = $no;
+            $row[] = ''.$p->bulan.' '.$p->tahun.'';
 			$row[] = $p->nama;
             $row[] = $p->rek;
             $row[] = $p->nama_nasabah;
@@ -94,6 +96,7 @@ class Storting extends CI_Controller {
             $no++;
             $row = array();
             $row[] = $no;
+            $row[] = ''.$p->bulan.' '.$p->tahun.'';
             $row[] = $p->rek;
             $row[] = $p->nama_nasabah;
             $row[] = $p->alamat;
