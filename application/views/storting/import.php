@@ -57,9 +57,9 @@
             </div>
             
 
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<textarea placeholder="Copy data yang akan dimasukan dari file excel, dan paste disini" rows="8" class="form-control" name="rows"></textarea>
-						</div>
+						</div> -->
 						
             <div class="row">
                 <div class="col-lg-3 mb-4">
