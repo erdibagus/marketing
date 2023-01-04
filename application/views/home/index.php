@@ -38,8 +38,8 @@
 <div id="container">
     <div class="card border-bottom-dark shadow h-100 py-2">
         <div class="card-body">
-            <h1 class="h5 font-weight-bold text-dark text-uppercase">Pengumuman!</h1>
-            <h1 class="h5 text-dark">- Sebelum input data, pastikan GPS sudah aktif. Terimakasih</h1>
+            <h1 class="h6 font-weight-bold text-dark text-uppercase">Pengumuman!</h1>
+            <h1 class="h6 text-dark">- Sebelum input data, pastikan GPS sudah aktif. Terimakasih</h1>
         </div>
     </div>
 </div>
