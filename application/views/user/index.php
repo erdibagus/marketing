@@ -10,12 +10,12 @@
         <div class="card-body">
             <form method="POST" action="<?= base_url() ?>user/import_user" enctype="multipart/form-data" name="myForm" onsubmit="return validateForm()">
                 <div class="row">
-                    <div class="col-lg-3 mb-4">
+                    <div class="col-lg-3">
                         <div class="form-group"><label class="text-dark font-weight-bold">Pilih File Excel</label>
                             <input type="file" name="userfile" id="excel" class="form-control" accept=".xlsx">
                         </div>
                     </div>
-                    <div class="col-lg-3 mb-4">
+                    <div class="col-lg-3">
                         <button type="submit" class="btn bg-gradient-success btn-md btn-icon-split">
                             <span class="text text-white">Upload</span>
                                 <span class="icon text-white-50">
