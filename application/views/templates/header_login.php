@@ -31,17 +31,6 @@ if ($this->session->has_userdata('login_session')) {
     <!-- Custom styles for this template-->
     <link href="<?= base_url(); ?>assets/sbadmin/css/sb-admin-biru.css" rel="stylesheet">
     
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $(".judul").hide();
-    });
-
-    $(window).load(function() {
-        $(".judul").fadeIn("slow");
-        $(".spinner").fadeOut("slow");
-    });
-    </script>
-    
 </head>
 
 <body class="bg-login-image">

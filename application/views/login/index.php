@@ -26,7 +26,7 @@
                         </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="p-5">
+                            <div class="p-4">
                                 <center>
                                     <img width="110px" src="<?= base_url() ?>assets/icon/logoputih.png">
                                 </center>
