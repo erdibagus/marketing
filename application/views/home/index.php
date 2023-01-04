@@ -48,10 +48,6 @@
 
 <!-- Page level plugins -->
 <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
-<script src="<?= base_url(); ?>assets/sbadmin/vendor/chart.js/Chart.min.js"></script>
-<!-- Page level custom scripts -->
-<script src="<?= base_url(); ?>assets/js/chart/chart-area.js"></script>
-<script src="<?= base_url(); ?>assets/js/chart/pie-chart.js"></script>
 
 <script src="<?= base_url(); ?>assets/sweetalert2/dist/sweetalert2.all.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/dashboard.js"></script>
