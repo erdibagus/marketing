@@ -435,20 +435,20 @@ border-color: grey;
                     <span>Storting</span>
                 </a>
             </li>
-            <?php if($this->session->userdata('login_session')['level'] == 'admin' || $this->session->userdata('login_session')['level'] == 'superadmin' ): ?>
+            <?php if($this->session->userdata('login_session')['level'] == 'admin' || $this->session->userdata('login_session')['level'] == 'superadmin' || $this->session->userdata('login_session')['level'] == 'manajer' ): ?>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Heading -->
             <div class="sidebar-heading">
                 Laporan
             </div>
-            
+            <?php if($this->session->userdata('login_session')['level'] == 'admin' || $this->session->userdata('login_session')['level'] == 'superadmin'): ?>
             <?php if($title == 'Grafik'): ?>
             <li class="nav-item active">
                 <?php else: ?>
             <li class="nav-item">
                 <?php endif; ?>
-                <a class="nav-link" href="<?= base_url() ?>grafik">
+                <a class="nav-link pb-0" href="<?= base_url() ?>grafik">
                 <i class="fas fa-fw fa fa-bolt"></i>
                     <span>Grafik</span>
                 </a>
@@ -461,12 +461,12 @@ border-color: grey;
                 <?php else: ?>
             <li class="nav-item">
                 <?php endif; ?>
-                <a class="nav-link" href="<?= base_url() ?>grafikmanajer">
+                <a class="nav-link pb-0" href="<?= base_url() ?>grafikmanajer">
                 <i class="fas fa-fw fa fa-bolt"></i>
                     <span>Grafik</span>
                 </a>
             </li>
-
+            <?php endif; ?>
             <?php if($title == 'Laporan Prospek' or $title == 'Laporan Survey' or $title == 'Laporan Penagihan' or $title == 'Laporan Telemarketing'): ?>
             <li class="nav-item active">
                 <?php else: ?>
