@@ -42,7 +42,7 @@
                                 <select name="divisi" class="form-control chosen">
                                     <?php foreach($divisi as $s): ?>
 
-                                    <?php if($u->divisi == $s->id_divisi): ?>
+                                    <?php if($u->divisi_id == $s->id_divisi): ?>
                                     <option value="<?= $s->id_divisi ?>" selected><?= $s->nama_divisi ?></option>
                                     <?php else: ?>
                                     <option value="<?= $s->id_divisi ?>"><?= $s->nama_divisi ?></option>
@@ -71,7 +71,7 @@
                                 <select name="kantor" class="form-control chosen">
                                     <?php foreach($kantor as $s): ?>
 
-                                    <?php if($u->kantor == $s->id_kantor): ?>
+                                    <?php if($u->kantor_id == $s->id_kantor): ?>
                                     <option value="<?= $s->id_kantor ?>" selected><?= $s->nama_kantor ?></option>
                                     <?php else: ?>
                                     <option value="<?= $s->id_kantor ?>"><?= $s->nama_kantor ?></option>
