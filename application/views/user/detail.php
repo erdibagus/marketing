@@ -73,7 +73,17 @@
 
                         <!-- Level -->
                         <div class="form-group"><label>Level</label>
-                            <h4 class="h4 text-gray-800"><?= $d->level ?></h4>
+                            <?php if($d->level == "admin"): ?>
+                            <h4>Manajer Pusat</h4>
+                            <?php elseif($d->level == "manajer"): ?>
+                            <h4>Manajer KPK</h4>
+                            <?php elseif($d->level == "user"): ?>
+                            <h4>User</h4>
+                            <?php else: ?>
+                            <h4>SuperAdmin</h4>
+                            <?php endif; ?>
+                            <?= $d->status ?>
+                            </h4>
                         </div>
 
                         <!-- Divider -->
