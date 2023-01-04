@@ -283,11 +283,33 @@ class User extends CI_Controller {
 			$inserdata=$this->user_model->insert_batch($data);
 			if($inserdata)
 			{
-				$this->session->set_flashdata('message','<div class="alert alert-success">Successfully Added.</div>');
-				redirect('home');
+			$this->session->set_flashdata('Pesan','
+			<script>
+			$(document).ready(function() {
+				swal.fire({
+					title: "Berhasil ditambahkan!",
+					icon: "success",
+					confirmButtonColor: "#4e73df",
+				});
+			});
+			</script>
+			');
+			//redirect halaman
+			redirect('user');
 			} else {
-				$this->session->set_flashdata('message','<div class="alert alert-danger">Data Not uploaded. Please Try Again.</div>');
-				redirect('home');
+			$this->session->set_flashdata('Pesan','
+			<script>
+			$(document).ready(function() {
+				swal.fire({
+					title: "Data Error!",
+					icon: "success",
+					confirmButtonColor: "#4e73df",
+				});
+			});
+			</script>
+			');
+			//redirect halaman
+			redirect('user');
 			}
 		}
 	}

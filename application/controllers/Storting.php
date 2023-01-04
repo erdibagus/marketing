@@ -339,84 +339,72 @@ class Storting extends CI_Controller {
 		$this->load->view('storting/cek_storting');
 		$this->load->view('templates/footer');
 	}
-	
-	public function upload()
+
+    public function import_storting()
 	{
-		// Load plugin PHPExcel nya
-		include APPPATH.'third_party/PHPExcel/PHPExcel.php';
+		$upload_file=$_FILES['userfile']['name'];
+		$extension=pathinfo($upload_file,PATHINFO_EXTENSION);
+		if($extension=='csv')
+		{
+			$reader= new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+		} else if($extension=='xls')
+		{
+			$reader= new \PhpOffice\PhpSpreadsheet\Reader\Xls();
+		} else
+		{
+			$reader= new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+		}
+		$spreadsheet=$reader->load($_FILES['userfile']['tmp_name']);
+		$sheetdata=$spreadsheet->getActiveSheet()->toArray();
+		$sheetcount=count($sheetdata);
+		if($sheetcount>1)
+		{
+            $user = 			$this->input->post('user');
+            $bulan = 			$this->input->post('bulan');
+            $tahun = 			$this->input->post('tahun');
+            $status = 			$this->input->post('status');
 
-		$config['upload_path'] = realpath('excel');
-		$config['allowed_types'] = 'xlsx|xls|csv';
-		$config['max_size'] = '10000';
-		$config['encrypt_name'] = true;
+            $user1 = explode('|', $user);
+            $user_id = $user1[0];
+            $kpk = $user1[1];
 
-		$this->load->library('upload', $config);
-
-		if (!$this->upload->do_upload()) {
-
-			//upload gagal
-			$this->session->set_flashdata('Pesan','
-			<script>
-			$(document).ready(function() {
-				swal.fire({
-					title: "Upload Gagal!",
-					icon: "warning",
-					confirmButtonColor: "#4e73df",
-				});
-			});
-			</script>
-			');
-			redirect('import');
-
-		} else {
-
-			$data_upload = $this->upload->data();
-
-			$excelreader   = new PHPExcel_Reader_Excel2007();
-			$loadexcel     = $excelreader->load('excel/'.$data_upload['file_name']); // Load file yang telah diupload ke folder excel
-			$sheet         = $loadexcel->getActiveSheet()->toArray(null, true, true ,true);
-
-			$user = 			$this->input->post('user');
-			$bulan = 			$this->input->post('bulan');
-			$tahun = 			$this->input->post('tahun');
-			$status = 			$this->input->post('status');
-
-			$user1 = explode('|', $user);
-			$user_id = $user1[0];
-			$kpk = $user1[1];
-			
-			$data = array();
-
-			$numrow = 1;
-			foreach($sheet as $row){
-							if($numrow > 1){
-								array_push($data, array(
-									'rek'      => $row['A'],
-									'nama_nasabah'  => $row['B'],
-									'alamat'  => $row['C'],
-									'realisasi'  => $row['D'],
-									'jatuh_tempo'  => $row['E'],
-									'plafon'  => $row['F'],
-									'baki_debet'  => $row['G'],
-									'pokok'  => $row['H'],
-									'bunga'  => $row['I'],
-									'denda'  => $row['J'],
-									'kolektabilitas'  => $row['K'],
-									'no_hp'  => $row['L'],
-									'user_id'  => $user_id,
-									'kpk'  => $kpk,
-									'bulan'  => $bulan,
-									'tahun'  => $tahun,
-									'status'  => $status,
-								));
-					}
-				$numrow++;
+			$data=array();
+			for ($i=1; $i < $sheetcount; $i++) { 
+				$rek=$sheetdata[$i][0];
+				$nama_nasabah=$sheetdata[$i][1];
+				$alamat=$sheetdata[$i][2];
+				$realisasi=$sheetdata[$i][3];
+				$jatuh_tempo=$sheetdata[$i][4];
+				$plafon=$sheetdata[$i][5];
+				$baki_debet=$sheetdata[$i][6];
+				$pokok=$sheetdata[$i][7];
+				$bunga=$sheetdata[$i][8];
+				$denda=$sheetdata[$i][9];
+				$kol=$sheetdata[$i][10];
+				$no_hp=$sheetdata[$i][11];
+				$data[]=array(
+					'rek'      => $rek,
+                    'nama_nasabah'  => $nama_nasabah,
+                    'alamat'  => $alamat,
+                    'realisasi'  => $realisasi,
+                    'jatuh_tempo'  => $jatuh_tempo,
+                    'plafon'  => $plafon,
+                    'baki_debet'  => $baki_debet,
+                    'pokok'  => $pokok,
+                    'bunga'  => $bunga,
+                    'denda'  => $denda,
+                    'kolektabilitas'  => $kol,
+                    'no_hp'  => $no_hp,
+                    'user_id'  => $user_id,
+                    'kpk'  => $kpk,
+                    'bulan'  => $bulan,
+                    'tahun'  => $tahun,
+                    'status'  => $status,
+				);
 			}
-			$this->db->insert_batch('storting', $data);
-			//delete file from server
-			unlink(realpath('excel/'.$data_upload['file_name']));
-
-			//upload success
+			$inserdata=$this->storting_model->insert_batch($data);
+			if($inserdata)
+			{
 			$this->session->set_flashdata('Pesan','
 			<script>
 			$(document).ready(function() {
@@ -430,7 +418,21 @@ class Storting extends CI_Controller {
 			');
 			//redirect halaman
 			redirect('import');
-
+			} else {
+			$this->session->set_flashdata('Pesan','
+			<script>
+			$(document).ready(function() {
+				swal.fire({
+					title: "Data Error!",
+					icon: "success",
+					confirmButtonColor: "#4e73df",
+				});
+			});
+			</script>
+			');
+			//redirect halaman
+			redirect('import');
+			}
 		}
 	}
 

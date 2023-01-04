@@ -669,4 +669,15 @@ class Storting_model extends ci_model{
         }
     }
 
+    public function insert_batch($data){
+        $this->db->insert_batch('storting',$data);
+        if($this->db->affected_rows()>0)
+        {
+          return 1;
+        }
+        else{
+          return 0;
+        }
+      }
+
 }

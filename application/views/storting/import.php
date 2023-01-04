@@ -7,7 +7,7 @@
 
   <div class="card border-bottom-secondary shadow mb-4">
     <div class="card-body">
-        <form method="POST" action="<?= base_url() ?>storting/upload" enctype="multipart/form-data" name="myForm" onsubmit="return validateForm()">
+        <form method="POST" action="<?= base_url() ?>storting/import_storting" enctype="multipart/form-data" name="myForm" onsubmit="return validateForm()">
             <div class="row">
                 <div class="col-lg-12 mb-2">
                 <span class="font-weight-bold text-dark">Petunjuk!</span>
