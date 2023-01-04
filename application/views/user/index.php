@@ -6,6 +6,28 @@
         <h1 class="h5 mb-0 text-center text-uppercase font-weigh-fold text-gray-800">Data Pengguna</h1>
     </div>
     <?php if($this->session->userdata('login_session')['level'] == 'superadmin'): ?>
+    <div class="card border-bottom-secondary shadow mb-4">
+        <div class="card-body">
+            <form method="POST" action="<?= base_url() ?>user/import_user" enctype="multipart/form-data" name="myForm" onsubmit="return validateForm()">
+                <div class="row">
+                    <div class="col-lg-3 mb-4">
+                        <div class="form-group"><label class="text-dark font-weight-bold">Pilih File Excel</label>
+                            <input type="file" name="userfile" id="excel" class="form-control" accept=".xlsx">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <button type="submit" class="btn bg-gradient-success btn-md btn-icon-split">
+                            <span class="text text-white">Upload</span>
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-upload"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
     <a href="<?= base_url() ?>user/tambah" class="col-lg btn btn-sm btn-primary btn-icon-split">
         <span class="text text-white">Tambah Data</span>
         <span class="icon text-white-50">
