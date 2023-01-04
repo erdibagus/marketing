@@ -30,7 +30,7 @@
 
                             <div class="form-group">
                             <label for="provinsi">Provinsi</label>
-                            <select class="form-control" id="provinsi" name="provinsi">
+                            <select class="form-control select2" id="provinsi" name="provinsi">
                                 <option value="">--Pilih--</option>
                                 <?php foreach ($provinsi as $prov) : ?>
                                     <option value="<?= $prov['id']; ?>"><?= $prov['nama_provinsi']; ?></option>
@@ -38,20 +38,20 @@
                             </select>
                             </div>
                             <div class="form-group" id="lkabupaten" hidden>
-                                <label for="kabupaten">Kabupaten</label>
-                                <select class="form-control" id="kabupaten" name="kabupaten">
+                                <label for="kabupaten">Kabupaten/Kota</label>
+                                <select class="form-control select2" id="kabupaten" name="kabupaten">
                                     <option value="">--Pilih--</option>
                                 </select>
                             </div>
                             <div class="form-group" id="lkecamatan" hidden>
                                 <label for="kecamatan">Kecamatan</label>
-                                <select class="form-control" id="kecamatan" name="kecamatan">
+                                <select class="form-control select2" id="kecamatan" name="kecamatan">
                                     <option value="">--Pilih--</option>
                                 </select>
                             </div>
                             <div class="form-group" id="ldesa" hidden>
                                 <label for="desa">Desa</label>
-                                <select class="form-control" id="desa" name="desa">
+                                <select class="form-control select2" id="desa" name="desa">
                                     <option value="">--Pilih--</option>
                                 </select>
                             </div>
@@ -79,11 +79,15 @@
 </div>
 <!-- End of Main Content -->
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
+<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script> -->
 <script src="<?= base_url(); ?>assets/js/nasabah_prospek.js"></script>
 <script src="<?= base_url(); ?>assets/js/loading.js"></script>
 <script src="<?= base_url(); ?>assets/js/validasi/formnasabah_prospek.js"></script>
@@ -175,6 +179,10 @@ $(window).load(function(){
 $('.chosen').chosen({
     width: '100%',
 
+});
+
+$('.select2').select2({
+    width: '100%'
 });
 </script>
 
