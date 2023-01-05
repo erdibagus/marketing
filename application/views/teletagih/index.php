@@ -1,6 +1,3 @@
-<!-- Begin Page Content -->
-<div class="container-fluid">
-
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
         <h1 class="h5 mb-0 text-center text-uppercase font-weight-bold text-gray-800">Teletagih</h1>
@@ -116,8 +113,6 @@
         </div>
     </div>
     <?php endif ?>
-</div>
-<!-- /.container-fluid -->
 
 </div>
 <!-- End of Main Content -->

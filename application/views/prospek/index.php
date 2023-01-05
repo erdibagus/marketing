@@ -1,5 +1,4 @@
 <!-- Begin Page Content -->
-<div class="container-fluid">
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
@@ -19,7 +18,7 @@
         
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover table-striped" id="tabel" width="100%" cellspacing="0">
+                    <table class="table table-hover table-striped" id="tabel" width="100%">
                         <thead>
                             <tr>
                                 <th width="1%">No</th>
@@ -103,7 +102,7 @@
     </div>
     <?php endif; ?>
 
-</div>
+
 <!-- /.container-fluid -->
 
 </div>

@@ -1,7 +1,7 @@
 <?php foreach ($data as $d): ?>
 
 <!-- Begin Page Content -->
-    <div class="container-fluid">
+
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
             <div class="d-sm-flex">
                 <h1 class="h5 mb-0 font-weight-bold text-uppercase text-center text-gray-800">Detail Storting</h1>
@@ -80,8 +80,6 @@
             </div>
         </div>
     </div>
-<!-- /.container-fluid -->
-</div>
 <!-- End of Main Content -->
 <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/prospek.js"></script>

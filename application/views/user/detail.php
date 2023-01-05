@@ -33,7 +33,7 @@
                     <div class="col-lg-9">
                         <!-- ID Anggota -->
                         <div class="form-group"><label>ID Pengguna</label>
-                            <h4 class="h4 text-gray-800"><b><?= $d->id_user ?></b></h4>
+                            <h4 class="h6 text-gray-800"><b><?= $d->id_user ?></b></h4>
                         </div>
 
                         <!-- Divider -->
@@ -41,7 +41,7 @@
 
                          <!-- Nama Lengkap -->
                          <div class="form-group"><label>Nama Lengkap</label>
-                            <h4 class="h4 text-gray-800"><?= $d->nama ?></h4>
+                            <h4 class="h6 text-gray-800"><?= $d->nama ?></h4>
                         </div>
 
                         <!-- Divider -->
@@ -49,7 +49,7 @@
 
                         <!-- Username -->
                         <div class="form-group"><label>Username</label>
-                            <h4 class="h4 text-gray-800"><?= $d->username ?></h4>
+                            <h4 class="h6 text-gray-800"><?= $d->username ?></h4>
                         </div>
 
                         <!-- Divider -->
@@ -57,7 +57,7 @@
 
                         <!-- Divisi -->
                         <div class="form-group"><label>Divisi</label>
-                            <h4 class="h4 text-gray-800"><?= $d->nama_divisi ?></h4>
+                            <h4 class="h6 text-gray-800"><?= $d->nama_divisi ?></h4>
                         </div>
 
                         <!-- Divider -->
@@ -65,7 +65,7 @@
 
                         <!-- Kantor -->
                         <div class="form-group"><label>Kantor</label>
-                            <h4 class="h4 text-gray-800"><?= $d->nama_kantor ?></h4>
+                            <h4 class="h6 text-gray-800"><?= $d->nama_kantor ?></h4>
                         </div>
 
                         <!-- Divider -->
@@ -74,16 +74,14 @@
                         <!-- Level -->
                         <div class="form-group"><label>Level</label>
                             <?php if($d->level == "admin"): ?>
-                            <h4>Manajer Pusat</h4>
+                            <h6>Manajer Pusat</h6>
                             <?php elseif($d->level == "manajer"): ?>
-                            <h4>Manajer KPK</h4>
+                            <h6>Manajer KPK</h6>
                             <?php elseif($d->level == "user"): ?>
-                            <h4>User</h4>
+                            <h6>User</h6>
                             <?php else: ?>
-                            <h4>SuperAdmin</h4>
+                            <h6>SuperAdmin</h6>
                             <?php endif; ?>
-                            <?= $d->status ?>
-                            </h4>
                         </div>
 
                         <!-- Divider -->
