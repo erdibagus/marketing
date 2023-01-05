@@ -560,9 +560,9 @@ class Storting_model extends ci_model{
         return false;
     }
 
-    public function hapus_data_all($user)
+    public function hapus_data_kosong()
     {
-        $this->db->where('user_id =', $user);
+        $this->db->where('rek' , '');
 		$this->db->delete('storting');
         return false;
     }

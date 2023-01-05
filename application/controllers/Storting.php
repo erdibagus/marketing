@@ -481,9 +481,9 @@ class Storting extends CI_Controller {
 		redirect('cek_storting');
 	}
 
-	public function proses_hapus_all($user)
+	public function hapus_data_kosong()
 	{
-		$this->storting_model->hapus_data_all($user); // Panggil fungsi delete dari model
+		$this->storting_model->hapus_data_kosong(); // Panggil fungsi delete dari model
 		$this->session->set_flashdata('Pesan','
 		<script>
 		$(document).ready(function() {

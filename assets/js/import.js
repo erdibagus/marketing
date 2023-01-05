@@ -15,7 +15,7 @@ function validasi(judul, status) {
     });
 }
 
-function konfirmasi(user) {
+function hapus_kosong() {
     var base_url = $('#baseurl').val();
 
     swal.fire({
@@ -38,7 +38,7 @@ function konfirmasi(user) {
                 showConfirmButton: false,
             }).then(
                 function () {
-                    window.location.href = base_url + "storting/proses_hapus_all/" + user;
+                    window.location.href = base_url + "storting/hapus_data_kosong/";
                 }
             );
         }

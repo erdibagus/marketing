@@ -5,7 +5,7 @@
     </div>
 <div class="mb-4" id="container">
 
-  <div class="card border-bottom-secondary shadow mb-4">
+<div class="card border-bottom-secondary shadow mb-4">
     <div class="card-body">
         <form method="POST" action="<?= base_url() ?>storting/import_storting" enctype="multipart/form-data" name="myForm" onsubmit="return validateForm()">
             <div class="row">
@@ -80,6 +80,23 @@
     </div>
 </div>
 
+<div class="d-sm-flex align-items-center justify-content-between mb-2">
+        <h1 class="h5 mb-0 text-center text-uppercase font-weight-bold text-gray-800">Clear Data</h1>
+</div>
+<div class="card border-bottom-secondary shadow mb-4">
+    <div class="card-body">
+        <div class="row">
+        <span class="font-weight-bold text-dark">Untuk menghapus data yang kosong</span>
+        </div>
+        <a href="#" class="btn btn-md bg-gradient-danger text-white btn-icon-split" onclick="hapus_kosong()">
+            <span class="text text-white">Hapus</span>
+            <span class="icon text-white-50">
+                <i class="fas fa-times"></i>
+            </span>
+        </a>
+    </div>
+</div>
+
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
@@ -149,7 +166,6 @@
 <script src="<?= base_url(); ?>assets/js/import.js"></script>
 <script src="<?= base_url(); ?>assets/js/validasi/formimport.js"></script>
 <script src="<?= base_url(); ?>assets/sweetalert2/dist/sweetalert2.all.min.js"></script>
-<script src="<?= base_url(); ?>assets/js/validasi/formimport.js"></script>
 <script src="<?= base_url(); ?>assets/plugin/chosen/chosen.jquery.min.js"></script>
 
 
