@@ -86,12 +86,15 @@
 <div class="card border-bottom-secondary shadow mb-4">
     <div class="card-body">
         <div class="row">
-        <span class="font-weight-bold text-dark">Untuk menghapus data yang kosong</span>
+            <div class="col-lg-12">
+                <span class="font-weight-bold text-dark">Penting!</span>
+                <p>Clear data dilakukan ketika upload storting sudah selesai semua.</p>
+            </div>
         </div>
-        <a href="#" class="btn btn-md bg-gradient-danger text-white btn-icon-split" onclick="hapus_kosong()">
-            <span class="text text-white">Hapus</span>
+        <a href="#" class="btn btn-md bg-gradient-info text-white btn-icon-split" onclick="hapus_kosong()">
+            <span class="text text-white">Clear</span>
             <span class="icon text-white-50">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
             </span>
         </a>
     </div>

@@ -488,7 +488,7 @@ class Storting extends CI_Controller {
 		<script>
 		$(document).ready(function() {
 			swal.fire({
-				title: "Berhasil dihapus!",
+				title: "Sukses!",
 				icon: "success",
 				confirmButtonColor: "#4e73df",
 			});

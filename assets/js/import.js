@@ -19,8 +19,8 @@ function hapus_kosong() {
     var base_url = $('#baseurl').val();
 
     swal.fire({
-        title: "Hapus Data ini?",
-        icon: "warning",
+        title: "Clear Data?",
+        icon: "info",
         closeOnClickOutside: false,
         showCancelButton: true,
         confirmButtonText: 'Iya',
