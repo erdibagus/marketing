@@ -1,19 +1,17 @@
 <?php foreach ($data as $d): ?>
 
 <!-- Begin Page Content -->
-    <div class="container-fluid">
-    <div class="d-sm-flex align-items-center justify-content-between mb-2">
-            <div class="d-sm-flex">
-                <h1 class="h5 mb-0 font-weight-bold text-uppercase text-center text-gray-800">Detail Prospek</h1>
-            </div>
-        </div>
+    
+    <div class="align-items-center justify-content-between mb-2">
+        <h1 class="h5 mb-0 font-weight-bold text-uppercase text-center text-gray-800">Detail Prospek</h1>    
+    </div>
         <!-- Page Heading -->
         <div class="justify-content-between mb-2">
             <div class="mb-4">
                 <!-- Illustrations -->
                 <div class="card border-bottom-secondary shadow mb-4">
                     <div class="card-header py-3 bg-secondary">
-                        <h5 class="m-0 font-weight-bold text-white"><?= $d->tanggal_prospek ?></h5>
+                        <h5 class="m-0 font-weight-bold text-center text-white"><?= $d->tanggal_prospek ?></h5>
                     </div>
                     <div class="card-body">
                         <div class="row invoice-info">
@@ -109,7 +107,7 @@
         </div>
     </div>
 <!-- /.container-fluid -->
-</div>
+
 <!-- End of Main Content -->
 <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/prospek.js"></script>

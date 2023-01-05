@@ -10,90 +10,74 @@
     <div class="row">
         
          <!-- Earnings (Monthly) Card Example -->
-         <a href="<?= base_url() ?>prospek" class="col-xl-3 col-md-6 mb-4" id="prospek">
-            <div class="card border-left-primary shadow h-100 py-2">
+         <a href="<?= base_url() ?>prospek" class="col-xl-3 col-3 col-md-6 mb-4" id="prospek">
+            <div class="card border-left-primary shadow">
                 <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="font-weight-bold text-gray-900 text-uppercase mb-1">Prospek
-                            </div>
-                            </div>
-                        <div class="col-auto">
-                        <i class="fas fa-bullhorn fa-2x text-gray-300"></i>
-                        </div>
+                    <div class="text-center">
+                    <i class="fas fa-bullhorn fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>
+            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Prospek
+                            </div>
         </a>
         
         <?php if($this->session->userdata('login_session')['divisi_id'] == '2'): ?>
         <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>survey" class="col-xl-3 col-md-6 mb-4" id="survey">
-            <div class="card border-left-info shadow h-100 py-2">
+        <a href="<?= base_url() ?>survey" class="col-xl-3 col-3 col-md-6 mb-4" id="survey">
+            <div class="card border-left-info shadow">
                 <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="font-weight-bold text-gray-900 text-uppercase mb-1">Survey
-                            </div>
-                            </div>
-                        <div class="col-auto">
-                        <i class="fas fa-balance-scale-left fa-2x text-gray-300"></i>
-                        </div>
+                    <div class="text-center">
+                    <i class="fas fa-balance-scale-left fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>
-        </a>
+            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Survey
+                            </div>
 
+        </a>
+        
         
         <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>penagihan" class="col-xl-3 col-md-6 mb-4" id="penagihan">
-            <div class="card border-left-warning shadow h-100 py-2">
+        <a href="<?= base_url() ?>penagihan" class="col-xl-3 col-3 col-md-6 mb-4" id="penagihan">
+            <div class="card border-left-warning shadow">
                 <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="font-weight-bold text-gray-900 text-uppercase mb-1">Penagihan
-                            </div>
-                            </div>
-                        <div class="col-auto">
-                        <i class="fas fa-cash-register fa-2x text-gray-300"></i>
-                        </div>
+                    <div class="text-center">
+                    <i class="fas fa-cash-register fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>
+            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Penagihan
+            </div>
         </a>
+        
         <?php endif; ?>
         <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>telemarketing" class="col-xl-3 col-md-6 mb-4" id="telemarketing">
-            <div class="card border-left-secondary shadow h-100 py-2">
+        <a href="<?= base_url() ?>telemarketing" class="col-xl-3 col-3 col-md-6 mb-4" id="telemarketing">
+            <div class="card border-left-secondary shadow">
                 <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="font-weight-bold text-gray-900 text-uppercase mb-1">Teleprospek
-                            </div>
-                            </div>
-                        <div class="col-auto">
-                        <i class="fas fa-headphones fa-2x text-gray-300"></i>
-                        </div>
+                    <div class="text-center">
+                    <i class="fas fa-headphones fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>
+            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Teleprospek
+            </div>
         </a>
+        
 
-        <a href="<?= base_url() ?>teletagih" class="col-xl-3 col-md-6 mb-4" id="teletagih">
-            <div class="card border-left-danger shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="font-weight-bold text-gray-900 text-uppercase mb-1">Teletagih
-                            </div>
-                            </div>
-                        <div class="col-auto">
+        <a href="<?= base_url() ?>teletagih" class="col-xl-3 col-3 col-md-6" id="teletagih">
+            <div class="card border-left-danger shadow">
+                <div class="card-body">               
+                    <div class="text-center">
                         <i class="fas fa-tty fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
+            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Teletagih
+            </div>
         </a>
+        
     </div>
     <?php else: ?>
     <div class="row">

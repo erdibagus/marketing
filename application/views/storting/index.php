@@ -1,5 +1,4 @@
 <!-- Begin Page Content -->
-<div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
         <h1 class="h5 mb-0 font-weight-bold text-uppercase text-center text-gray-800">Storting</h1>
     </div>
@@ -230,7 +229,6 @@
         </div>
         <!-- / .col -->
     </div>
-</div>
 <?php endif; ?>
 <!-- /.container-fluid -->
 

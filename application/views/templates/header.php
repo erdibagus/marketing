@@ -609,7 +609,7 @@ border-color: grey;
                             </svg>
                                 <span class="small d-block">Master</span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            <div class="dropdown-menu shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="<?= base_url() ?>divisi">
                                     Divisi

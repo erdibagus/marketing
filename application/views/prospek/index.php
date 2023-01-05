@@ -1,15 +1,15 @@
-<!-- Begin Page Content -->
-
-    <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-2">
+  <!-- Page Heading -->
+    <div class="align-items-center justify-content-between">
         <h1 class="h5 mb-0 font-weight-bold text-uppercase text-center text-gray-800">Prospek</h1>
     </div>
-    <a href="<?= base_url() ?>prospek/tambah" class="col-lg btn btn-sm bg-gradient-info btn-icon-split">
-        <span class="text text-white">Tambah Data</span>
-        <span class="icon text-white-50">
-            <i class="fas fa-plus"></i>
-        </span>
-    </a>
+    <div class="card-body">
+        <a href="<?= base_url() ?>prospek/tambah" class="col-lg btn btn-sm bg-gradient-info btn-icon-split">
+            <span class="text text-white">Tambah Data</span>
+            <span class="icon text-white-50">
+                <i class="fas fa-plus"></i>
+            </span>
+        </a>
+    </div>
     <?php if($this->session->userdata('login_session')['level'] == 'admin' || $this->session->userdata('login_session')['level'] == 'superadmin'): ?>
     <div class="mb-4" id="container">
 
@@ -18,7 +18,7 @@
         
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover table-striped" id="tabel" width="100%">
+                    <table class="table table-hover table-striped" id="tabel" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th width="1%">No</th>
@@ -101,9 +101,6 @@
 
     </div>
     <?php endif; ?>
-
-
-<!-- /.container-fluid -->
 
 </div>
 <!-- End of Main Content -->
