@@ -668,7 +668,7 @@ border-color: grey;
                                 
                                 <span class="small d-block">Laporan</span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            <div class="dropdown-menu shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="<?= base_url() ?>lap_prospek">
                                     Prospek
