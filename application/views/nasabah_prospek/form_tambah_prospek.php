@@ -56,7 +56,6 @@
                                 </select>
                             </div>
                             <div class="form-group"><label>No Telepon</label>
-                            
                             <span class="text-danger">*hanya angka</span>
                                 <input class="form-control" name="no_tlp" type="number" placeholder="">
                             </div>

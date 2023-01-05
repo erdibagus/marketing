@@ -59,7 +59,6 @@
                             <span class="text-danger">*hanya angka</span>
                                 <input class="form-control" name="no_tlp" type="number" placeholder="">
                             </div>
-                            </div>
                         </div>                       
                     </div>
                 </div>
