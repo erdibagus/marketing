@@ -37,7 +37,6 @@ class Telemarketing extends CI_Controller {
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->alamat.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->usaha.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->no_tlp.'';
-            $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->hasil.'';
             $row[] = '
 			<a class="btn btn-sm btn-primary" href="telemarketing/ubah/'.$p->id_telemarketing.'">Edit</a>
 			<a class="btn btn-sm btn-danger" href="javascript:void(0)" onclick="konfirmasi('."'".$p->id_telemarketing."'".')">Delete</a>';
@@ -72,7 +71,6 @@ class Telemarketing extends CI_Controller {
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->alamat.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->usaha.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->no_tlp.'';
-            $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->hasil.'';
             $data[] = $row;
         }
  
@@ -96,14 +94,12 @@ class Telemarketing extends CI_Controller {
             $row = array();
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$no.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->tanggal_telemarketing.'';
-            $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->nama_kantor.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->nama_kategori.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->nama_sumber.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->nama_nasabah_prospek.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->alamat.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->usaha.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->no_tlp.'';
-            $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_telemarketing."'".')">'.$p->hasil.'';
             $data[] = $row;
         }
  

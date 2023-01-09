@@ -31,7 +31,6 @@
                                 <th>Alamat</th>
                                 <th>Usaha</th>
                                 <th>No. Telepon</th>
-                                <th>Hasil</th>
                                 <th width="1%">Aksi</th>
                             </tr>
                         </thead>
@@ -64,7 +63,6 @@
                                 <th>Alamat</th>
                                 <th>Usaha</th>
                                 <th>No. Telepon</th>
-                                <th>Hasil</th>
                             </tr>
                         </thead>
                         <tbody style="cursor:pointer;">
@@ -95,7 +93,6 @@
                                 <th>Alamat</th>
                                 <th>Usaha</th>
                                 <th>No. Telepon</th>
-                                <th>Hasil</th>
                             </tr>
                         </thead>
                         <tbody style="cursor:pointer;">
