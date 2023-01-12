@@ -11,8 +11,8 @@
 <div class="card shadow mb-4" id="profil">
     <div class="card-body">
         <center>
-            <div class="col-lg-12 mb-4">
-                <div class="box-circle bg-primary posisi mb-4">
+            <div class="col-lg-12 mb-5">
+                <div class="box-circle bg-primary posisi mb-5">
                     <img class="img-thumbnail rounded-circle" id="outputImg" width="100%" height="100%"
                         src="<?= base_url() ?>assets/upload/pengguna/user.png">
                 </div>
