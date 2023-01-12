@@ -343,7 +343,7 @@ class Prospek_model extends ci_model{
 
     function count_filteredtglkantor($tglawal, $tglakhir, $kantor)
     {
-        $this->_get_datatables_querytgluserkantor($tglawal, $tglakhir, $kantor);
+        $this->_get_datatables_querytglkantor($tglawal, $tglakhir, $kantor);
         $query = $this->db->get();
         return $query->num_rows();
     }
