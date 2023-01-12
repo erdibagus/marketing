@@ -10,70 +10,70 @@
     <div class="row">
         
          <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>prospek" class="col-xl-3 col-3 col-md-6 mb-4" id="prospek">
+        <a href="<?= base_url() ?>prospek" class="col-xl-4 col-4 col-md-6 mb-4" id="prospek">
             <div class="card border-left-primary shadow">
                 <div class="card-body">
                     <div class="text-center">
-                    <i class="fas fa-bullhorn fa-2x text-gray-300"></i>
+                    <i class="fas fa-bullhorn text-gray-300"></i>
                     </div>
                 </div>
             </div>
-            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Prospek
+            <div class="text-gray-900 text-center mb-1 mt-2">Prospek
             </div>
         </a>
         
         <?php if($this->session->userdata('login_session')['divisi_id'] == '2'): ?>
         <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>survey" class="col-xl-3 col-3 col-md-6 mb-4" id="survey">
+        <a href="<?= base_url() ?>survey" class="col-xl-4 col-4 col-md-6 mb-4" id="survey">
             <div class="card border-left-info shadow">
                 <div class="card-body">
                     <div class="text-center">
-                    <i class="fas fa-balance-scale-left fa-2x text-gray-300"></i>
+                    <i class="fas fa-balance-scale-left text-gray-300"></i>
                     </div>
                 </div>
             </div>
-            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Survey
+            <div class="text-gray-900 text-center mb-1 mt-2">Survey
             </div>
         </a>
         
         
         <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>penagihan" class="col-xl-3 col-3 col-md-6 mb-4" id="penagihan">
+        <a href="<?= base_url() ?>penagihan" class="col-xl-4 col-4 col-md-6 mb-4" id="penagihan">
             <div class="card border-left-warning shadow">
                 <div class="card-body">
                     <div class="text-center">
-                    <i class="fas fa-cash-register fa-2x text-gray-300"></i>
+                    <i class="fas fa-cash-register text-gray-300"></i>
                     </div>
                 </div>
             </div>
-            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Penagihan
+            <div class="text-gray-900 text-center mb-1 mt-2">Penagihan
             </div>
         </a>
         
         <?php endif; ?>
         <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>telemarketing" class="col-xl-3 col-3 col-md-6 mb-4" id="telemarketing">
+        <a href="<?= base_url() ?>telemarketing" class="col-xl-4 col-4 col-md-6 mb-4" id="telemarketing">
             <div class="card border-left-secondary shadow">
                 <div class="card-body">
                     <div class="text-center">
-                    <i class="fas fa-headphones fa-2x text-gray-300"></i>
+                    <i class="fas fa-headphones text-gray-300"></i>
                     </div>
                 </div>
             </div>
-            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Teleprospek
+            <div class="text-gray-900 text-center mb-1 mt-2">Teleprospek
             </div>
         </a>
         
 
-        <a href="<?= base_url() ?>teletagih" class="col-xl-3 col-3 col-md-6" id="teletagih">
+        <a href="<?= base_url() ?>teletagih" class="col-xl-4 col-4 col-md-6" id="teletagih">
             <div class="card border-left-danger shadow">
                 <div class="card-body">               
                     <div class="text-center">
-                        <i class="fas fa-tty fa-2x text-gray-300"></i>
+                        <i class="fas fa-tty text-gray-300"></i>
                     </div> 
                 </div>
             </div>
-            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Teletagih
+            <div class="text-gray-900 text-center mb-1 mt-2">Teletagih
             </div>
         </a>
         
@@ -81,65 +81,65 @@
     <?php else: ?>
     <div class="row">
          <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>prospek" class="col-xl-3 col-3 col-md-6 mb-4" id="prospek">
+        <a href="<?= base_url() ?>prospek" class="col-xl-4 col-4 col-md-6 mb-4" id="prospek">
             <div class="card border-left-primary shadow">
                 <div class="card-body">
                     <div class="text-center">
-                    <i class="fas fa-bullhorn fa-2x text-gray-300"></i>
+                    <i class="fas fa-bullhorn text-gray-300"></i>
                     </div>
                 </div>
             </div>
-            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Prospek
+            <div class="text-gray-900 text-center mb-1 mt-2">Prospek
             </div>
         </a>
         
         <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>survey" class="col-xl-3 col-3 col-md-6 mb-4" id="survey">
+        <a href="<?= base_url() ?>survey" class="col-xl-4 col-4 col-md-6 mb-4" id="survey">
             <div class="card border-left-info shadow">
                 <div class="card-body">
                     <div class="text-center">
-                    <i class="fas fa-balance-scale-left fa-2x text-gray-300"></i>
+                    <i class="fas fa-balance-scale-left text-gray-300"></i>
                     </div>
                 </div>
             </div>
-            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Survey
+            <div class="text-gray-900 text-center mb-1 mt-2">Survey
             </div>
         </a>
 
         <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>penagihan" class="col-xl-3 col-3 col-md-6 mb-4" id="penagihan">
+        <a href="<?= base_url() ?>penagihan" class="col-xl-4 col-4 col-md-6 mb-4" id="penagihan">
             <div class="card border-left-warning shadow">
                 <div class="card-body">
                     <div class="text-center">
-                    <i class="fas fa-cash-register fa-2x text-gray-300"></i>
+                    <i class="fas fa-cash-register text-gray-300"></i>
                     </div>
                 </div>
             </div>
-            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Penagihan
+            <div class="text-gray-900 text-center mb-1 mt-2">Penagihan
             </div>
         </a>
         <!-- Earnings (Monthly) Card Example -->
-        <a href="<?= base_url() ?>telemarketing" class="col-xl-3 col-3 col-md-6 mb-4" id="telemarketing">
+        <a href="<?= base_url() ?>telemarketing" class="col-xl-4 col-4 col-md-6 mb-4" id="telemarketing">
             <div class="card border-left-secondary shadow">
                 <div class="card-body">
                     <div class="text-center">
-                    <i class="fas fa-headphones fa-2x text-gray-300"></i>
+                    <i class="fas fa-headphones text-gray-300"></i>
                     </div>
                 </div>
             </div>
-            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Teleprospek
+            <div class="text-gray-900 text-center mb-1 mt-2">Teleprospek
             </div>
         </a>
 
-        <a href="<?= base_url() ?>teletagih" class="col-xl-3 col-3 col-md-6" id="teletagih">
+        <a href="<?= base_url() ?>teletagih" class="col-xl-4 col-4 col-md-6" id="teletagih">
             <div class="card border-left-danger shadow">
                 <div class="card-body">               
                     <div class="text-center">
-                        <i class="fas fa-tty fa-2x text-gray-300"></i>
+                        <i class="fas fa-tty text-gray-300"></i>
                     </div> 
                 </div>
             </div>
-            <div class="font-weight-bold text-gray-900 text-center mb-1 mt-2">Teletagih
+            <div class="text-gray-900 text-center mb-1 mt-2">Teletagih
             </div>
         </a>
     </div>
