@@ -25,8 +25,8 @@ class Nasabah_prospek extends CI_Controller {
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_nasabah_prospek."'".')">'.$no.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_nasabah_prospek."'".')">'.$p->nama_nasabah_prospek.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_nasabah_prospek."'".')">'.$p->alamat.'';
-            $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_nasabah_prospek."'".')">'.$p->nama_kecamatan.'';
-            $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_nasabah_prospek."'".')">'.$p->nama_desa.'';
+            // $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_nasabah_prospek."'".')">'.$p->nama_kecamatan.'';
+            // $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_nasabah_prospek."'".')">'.$p->nama_desa.'';
             $row[] = '<javascript:void(0) onclick="detail('."'".$p->id_nasabah_prospek."'".')">'.$p->no_tlp.'';
             $row[] = '
 			<a class="btn btn-sm btn-primary" href="nasabah_prospek/ubah/'.$p->id_nasabah_prospek.'">Edit</a>
@@ -48,7 +48,7 @@ class Nasabah_prospek extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = 'Nasabah Prospek';
-		$data['nasabah_prospek'] = $this->nasabah_prospek_model->dataJoin()->result();
+		// $data['nasabah_prospek'] = $this->nasabah_prospek_model->dataJoin()->result();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('nasabah_prospek/index');

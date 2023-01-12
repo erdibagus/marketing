@@ -15,10 +15,13 @@ class Nasabah_prospek_model extends ci_model{
     private function _get_datatables_query()
     {
       $this->db->from('nasabah_prospek as b');
-      $this->db->join('wilayah_provinsi as p', 'p.id = b.provinsi');
-      $this->db->join('wilayah_kabupaten as k', 'k.id = b.kabupaten');
-      $this->db->join('wilayah_kecamatan as c', 'c.id = b.kecamatan');
-      $this->db->join('wilayah_desa as d', 'd.id = b.desa');
+      
+    //   scrip dibawah disable karna overload data desa
+
+    //   $this->db->join('wilayah_provinsi as p', 'p.id = b.provinsi');
+    //   $this->db->join('wilayah_kabupaten as k', 'k.id = b.kabupaten');
+    //   $this->db->join('wilayah_kecamatan as c', 'c.id = b.kecamatan');
+    //   $this->db->join('wilayah_desa as d', 'd.id = b.desa');
 
 
 

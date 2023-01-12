@@ -24,8 +24,8 @@
                                 <th width="1%">No</th>
                                 <th>Nama Nasabah</th>
                                 <th>Alamat</th>
-                                <th>Kecamatan</th>
-                                <th>Desa</th>
+                                <!-- <th>Kecamatan</th>
+                                <th>Desa</th> -->
                                 <th>No Telepon</th>
                                 <th width="1%">Aksi</th>
                             </tr>
@@ -79,7 +79,8 @@ $(document).ready(function() {
             "processing": true, //Feature control the processing indicator.
             "serverSide": true, //Feature control DataTables' server-side processing mode.
             "order": [], //Initial no order.
-    
+     
+            lengthChange: false,
             // Load data for the table's content from an Ajax source
             "ajax": {
                 "url": "<?php echo site_url('nasabah_prospek/ajax_list')?>",

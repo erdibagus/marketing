@@ -225,7 +225,7 @@ border-color: grey;
             </li>
             </li> -->
 
-            <?php if($title == 'Nasabah Prospek'): ?>
+            <!-- <?php if($title == 'Nasabah Prospek'): ?>
             <li class="nav-item active">
                 <?php else: ?>
             <li class="nav-item">
@@ -235,7 +235,7 @@ border-color: grey;
                     <span>Nasabah Prospek</span>
                 </a>
             </li>
-            </li>
+            </li> -->
 
             <?php if($title == 'Kolektabilitas' or $title == 'Kategori' or $title == 'Agunan' or $title == 'Sistem Pinjam' or $title == 'Sumber'): ?>
             <li class="nav-item active">
@@ -617,12 +617,12 @@ border-color: grey;
                                 <a class="dropdown-item" href="<?= base_url() ?>kantor">
                                     Kantor
                                 </a>
-                                <a class="dropdown-item" href="<?= base_url() ?>nasabah_prospek">
+                                <!-- <a class="dropdown-item" href="<?= base_url() ?>nasabah_prospek">
                                     Nasabah Prospek
                                 </a>
                                 <a class="dropdown-item" href="<?= base_url() ?>nasabah">
                                     Nasabah
-                                </a>
+                                </a> -->
                                 <a class="dropdown-item" href="<?= base_url() ?>kategori">
                                     Kategori
                                 </a>
